@@ -44,6 +44,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             i.putExtra("Id", wishList.get(position).getId());
             i.putExtra("Title", wishList.get(position).getTitle());
             i.putExtra("Details", wishList.get(position).getDetails());
+            i.putExtra("Category",wishList.get(position).getCategory());
+            i.putExtra("Price",wishList.get(position).getPrice());
             context.startActivity(i);
 
         });

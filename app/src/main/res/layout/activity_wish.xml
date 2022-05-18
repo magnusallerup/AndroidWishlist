@@ -5,48 +5,85 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/back_brown"
+    android:orientation="vertical"
     tools:context=".WishActivity">
 
-    <androidx.core.widget.NestedScrollView
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
-        android:padding="10dp">
+        android:layout_weight="0.1"
+        android:gravity="left"
+        android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical">
+        <TextView
+            android:id="@+id/activity_wish_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingStart="20dp"
+            android:paddingTop="20dp"
+            android:text="Wish name"
+            android:textColor="@color/btn_blue"
+            android:textSize="36sp"
+            android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/activity_wish_item_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Wish name"
-                android:textColor="@color/btn_blue"
-                android:layout_marginTop="10dp"
-                android:textSize="18sp"
-                android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/activity_wish_item_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingStart="20dp"
+            android:text="Wish desc"
+            android:textColor="@color/btn_blue"
+            android:textSize="24sp" />
 
-            <TextView
-                android:id="@+id/activity_wish_item_details"
-                android:textSize="16sp"
-                android:layout_marginTop="10dp"
-                android:textColor="@color/btn_blue"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Wish desc"
-                />
+        <TextView
+            android:id="@+id/activity_wish_item_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingStart="20dp"
+            android:text="Wish price"
+            android:textColor="@color/btn_blue"
+            android:textSize="24sp" />
 
-            <Button
-                android:id="@+id/btn_delete_wish"
-                android:layout_width="wrap_content"
-                android:backgroundTint="@color/btn_blue"
-                android:layout_height="wrap_content"
-                android:text="Delete" />
+        <TextView
+            android:id="@+id/activity_wish_item_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingStart="20dp"
+            android:text="Wish category"
+            android:textColor="@color/btn_blue"
+            android:textSize="24sp" />
 
-        </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:paddingBottom="50dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_delete_wish"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/btn_blue"
+            android:text="Slet" />
+
+        <Button
+            android:id="@+id/btn_return"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="157dp"
+            android:backgroundTint="@color/btn_blue"
+            android:text="Tilbage" />
+
+    </RelativeLayout>
 
 </LinearLayout>
