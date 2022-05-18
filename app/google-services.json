@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "3540667343",
+    "project_id": "rexam-b3c83",
+    "storage_bucket": "rexam-b3c83.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:3540667343:android:9874040fdbd0fe1d9160ba",
+        "android_client_info": {
+          "package_name": "com.mra.wishlisteksamen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "3540667343-c5l8ggtqbd63un0a0pk94k17ibdjg0re.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtdJxKffSdhdHwdu6cdx2OUSXTyuxQ_EE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "3540667343-c5l8ggtqbd63un0a0pk94k17ibdjg0re.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

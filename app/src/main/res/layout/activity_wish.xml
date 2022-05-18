@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_brown"
+    tools:context=".WishActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/activity_wish_item_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wish name"
+                android:textColor="@color/btn_blue"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/activity_wish_item_details"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/btn_blue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wish desc"
+                />
+
+            <Button
+                android:id="@+id/btn_delete_wish"
+                android:layout_width="wrap_content"
+                android:backgroundTint="@color/btn_blue"
+                android:layout_height="wrap_content"
+                android:text="Delete" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

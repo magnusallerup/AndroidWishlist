@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_brown"
+    tools:context=".NewWishActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="43dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/btnIntent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:ignore="MissingConstraints">
+
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginBottom="40dp"
+            android:layout_weight="1"
+            android:background="@color/brown"
+            android:ems="10"
+            android:textColorHint="@color/strings"
+            android:hint="Ønske titel"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/editDetails"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginBottom="40dp"
+            android:layout_weight="1"
+            android:background="@color/brown"
+            android:ems="10"
+            android:textColorHint="@color/strings"
+
+            android:hint="Beskriv ønsket"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/editTextPrice"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginBottom="40dp"
+            android:layout_weight="1"
+            android:background="@color/brown"
+            android:ems="10"
+            android:textColorHint="@color/strings"
+
+            android:hint="Angiv pris"
+            android:inputType="textPersonName" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginBottom="40dp"
+            android:layout_weight="1"
+            android:background="@color/brown"
+            android:entries="@array/categories" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="64dp"
+        android:backgroundTint="@color/btn_blue"
+        android:text="Gem ønske"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnIntent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnIntent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="64dp"
+        android:backgroundTint="@color/btn_blue"
+        android:text="Tilbage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnSubmit"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:layout_marginBottom="55dp"
+        android:fontFamily="sans-serif"
+        android:text="Tilføj et ønske"
+        android:textColor="@color/strings"
+
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
