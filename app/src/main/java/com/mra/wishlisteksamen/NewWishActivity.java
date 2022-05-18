@@ -30,7 +30,6 @@ public class NewWishActivity extends AppCompatActivity {
     FirebaseFirestore databaseReference;
     List<Wish> wishList;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
