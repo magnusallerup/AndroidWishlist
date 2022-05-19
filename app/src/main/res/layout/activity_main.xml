@@ -37,13 +37,13 @@
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_gravity="center"
-            android:background="#86C6F4"
+            android:background="@color/btn_blue"
             android:paddingTop="10dp"
             android:text="Ønskeliste"
             android:textAlignment="center"
-            android:textSize="26dp"
+            android:textColor="#FFFFFF"
 
-            />
+            android:textSize="26dp" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerview_id"
