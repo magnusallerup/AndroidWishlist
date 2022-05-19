@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button btnIntent;
     List<Wish> wishList;
-    FirebaseFirestore databaseReference;
+    FirebaseFirestore firestore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnIntent = findViewById(R.id.new_wish_btn);
         wishList = new ArrayList<>();
-        databaseReference = FirebaseFirestore.getInstance();
+        firestore = FirebaseFirestore.getInstance();
 
         btnIntent.setOnClickListener(view -> {
             Intent intent = new Intent(getApplicationContext(), NewWishActivity.class);
@@ -37,10 +37,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        databaseReference.collection("wishlist").get().addOnCompleteListener(task -> {
+        firestore.collection("wishlist").get().addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
                 for (QueryDocumentSnapshot queryDocumentSnapshot : task.getResult()) {
                     Log.d("tag", "onStart got wish with id: " + queryDocumentSnapshot.getId());
+
                     wishList.add(queryDocumentSnapshot.toObject(Wish.class));
                 }
 

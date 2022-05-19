@@ -39,7 +39,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.tv_item_category.setText(wishList.get(position).getCategory());
 
         holder.cardView.setOnClickListener(view -> {
-
             Intent i = new Intent(context, WishActivity.class);
             i.putExtra("Id", wishList.get(position).getId());
             i.putExtra("Title", wishList.get(position).getTitle());
@@ -47,7 +46,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             i.putExtra("Category",wishList.get(position).getCategory());
             i.putExtra("Price",wishList.get(position).getPrice());
             context.startActivity(i);
-
         });
     }
 
