@@ -7,76 +7,19 @@
     android:background="@color/back_brown"
     tools:context=".NewWishActivity">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="247dp"
-        android:layout_height="292dp"
-        android:layout_marginStart="31dp"
-        android:layout_marginTop="152dp"
-        android:layout_marginEnd="31dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        tools:ignore="MissingConstraints">
-
-        <EditText
-            android:id="@+id/editTextName"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_gravity="center_horizontal|center_vertical"
-            android:layout_marginBottom="40dp"
-            android:layout_weight="0.3"
-            android:background="@color/brown"
-            android:ems="10"
-            android:hint="Ønske titel"
-            android:inputType="textPersonName"
-            android:textColorHint="@color/strings" />
-
-        <EditText
-            android:id="@+id/editDetails"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_gravity="center_horizontal|center_vertical"
-            android:layout_marginBottom="40dp"
-            android:layout_weight="0.3"
-            android:background="@color/brown"
-            android:ems="10"
-            android:hint="Beskriv ønsket"
-
-            android:inputType="textPersonName"
-            android:textColorHint="@color/strings" />
-
-        <EditText
-            android:id="@+id/editTextPrice"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_gravity="center_horizontal|center_vertical"
-            android:layout_marginBottom="40dp"
-            android:layout_weight="0.3"
-            android:background="@color/brown"
-            android:ems="10"
-            android:hint="Angiv pris"
-
-            android:inputType="textPersonName"
-            android:textColorHint="@color/strings" />
-
-    </LinearLayout>
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tvAddWish"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="55dp"
-        android:layout_marginBottom="46dp"
+
+        android:layout_marginTop="80dp"
         android:fontFamily="sans-serif"
         android:text="Tilføj et ønske"
-
         android:textColor="@color/strings"
         android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -85,48 +28,108 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:layout_marginStart="88dp"
+        android:layout_marginTop="100dp"
         android:backgroundTint="@color/btn_blue"
         android:text="Gem ønske"
-        app:layout_constraintBottom_toBottomOf="@+id/btnIntent"
+        app:layout_constraintEnd_toStartOf="@+id/btnIntent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btnIntent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/tvDetails" />
 
     <Button
         android:id="@+id/btnIntent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="88dp"
-        android:layout_marginBottom="80dp"
         android:backgroundTint="@color/btn_blue"
         android:text="Tilbage"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal|center_vertical"
-        android:layout_marginBottom="535dp"
-        android:layout_weight="0.5"
-        android:background="@color/brown"
-        android:entries="@array/categories"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toTopOf="@+id/btnSubmit"
+        app:layout_constraintStart_toEndOf="@+id/btnSubmit" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvWish"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginBottom="10dp"
-        android:text="Kategori"
-        app:layout_constraintBottom_toTopOf="@+id/spinner"
-        app:layout_constraintStart_toStartOf="@+id/spinner"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:text="Ønske:"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAddWish" />
+
+    <TextView
+        android:id="@+id/tvCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Kategori:"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWish" />
+
+    <TextView
+        android:id="@+id/tvDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Beskrivelse:"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPrice" />
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Pris:"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCategory" />
+
+    <EditText
+        android:id="@+id/editTextWish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toEndOf="@+id/tvWish"
+        app:layout_constraintTop_toTopOf="@+id/tvWish"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/editTextPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/tvPrice"
+        app:layout_constraintTop_toTopOf="@+id/tvPrice"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/editTextDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/tvDetails"
+        app:layout_constraintTop_toTopOf="@+id/tvDetails"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Spinner
+        android:id="@+id/spinnerCategory"
+        android:layout_width="160dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:entries="@array/categories"
+        app:layout_constraintStart_toEndOf="@+id/tvCategory"
+        app:layout_constraintTop_toTopOf="@+id/tvCategory" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

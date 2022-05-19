@@ -35,7 +35,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.tv_item_title.setText(wishList.get(position).getTitle());
-        holder.tv_item_price.setText(wishList.get(position).getPrice() + "kr");
+        holder.tv_item_price.setText(wishList.get(position).toString());
         holder.tv_item_category.setText(wishList.get(position).getCategory());
 
         holder.cardView.setOnClickListener(view -> {

@@ -32,7 +32,7 @@ public class WishActivity extends AppCompatActivity {
         String details = intent.getExtras().getString("Details");
         String id = intent.getExtras().getString("Id");
         String category = intent.getExtras().getString("Category");
-        String price = intent.getExtras().getString("Price");
+        int price = (intent.getExtras().getInt("Price"));
 
         tvTitle.setText(String.format("Ønske: %s",title));
         tvDetails.setText(String.format("Info: %s", details));

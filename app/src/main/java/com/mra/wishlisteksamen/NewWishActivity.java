@@ -10,8 +10,6 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
@@ -24,8 +22,8 @@ public class NewWishActivity extends AppCompatActivity {
     EditText editName;
     EditText editPrice;
     EditText editDetails;
-    Button btn;
-    Button btnIntent;
+    Button btnSumbit;
+    Button btnCancel;
     Spinner spinner;
     FirebaseFirestore databaseReference;
     List<Wish> wishList;
@@ -34,17 +32,17 @@ public class NewWishActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_wish);
-        editName = findViewById(R.id.editTextName);
-        btn = findViewById(R.id.btnSubmit);
+        editName = findViewById(R.id.editTextWish);
+        btnSumbit = findViewById(R.id.btnSubmit);
         databaseReference = FirebaseFirestore.getInstance();
-        spinner = findViewById(R.id.spinner);
+        spinner = findViewById(R.id.spinnerCategory);
         editPrice = findViewById(R.id.editTextPrice);
-        editDetails = findViewById(R.id.editDetails);
-        btnIntent = findViewById(R.id.btnIntent);
+        editDetails = findViewById(R.id.editTextDetails);
+        btnCancel = findViewById(R.id.btnIntent);
         wishList = new ArrayList<>();
-        btn.setOnClickListener(x -> addWish());
+        btnSumbit.setOnClickListener(x -> addWish());
 
-        btnIntent.setOnClickListener(view -> {
+        btnCancel.setOnClickListener(view -> {
             Intent i = new Intent(NewWishActivity.this, MainActivity.class);
             startActivity(i);
 
@@ -56,7 +54,7 @@ public class NewWishActivity extends AppCompatActivity {
     private void addWish(){
         String name = editName.getText().toString().trim();
         String details = editDetails.getText().toString();
-        String price = editPrice.getText().toString();
+        int price = Integer.parseInt(editPrice.getText().toString());
         String category = spinner.getSelectedItem().toString();
 
         if (!TextUtils.isEmpty(name)){
